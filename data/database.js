@@ -5,7 +5,7 @@ export const connectDB=()=>{
     .connect(process.env.MONGO_URI,{
         dbName:"Api",
     })
-    .then(()=> console.log("Db connected"))
+    .then((c)=> console.log(`Db connected with ${c.connection.host}`))
     .catch((e)=> console.log(e));
 }
     
